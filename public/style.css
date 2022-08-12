@@ -1,0 +1,25 @@
+#heading{
+    color: rgb(15, 16, 18);
+    margin-top: 8%;
+    font-weight: bolder;
+    font-style: oblique;
+    font-family:'Times New Roman', Times, serif ;
+}
+
+
+body:after {
+    content: "";
+    background-image:url('img.jpg');
+    background-repeat:repeat;
+    background-position:center;
+    background-attachment:fixed;
+    background-size:cover;
+    
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
