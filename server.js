@@ -4,6 +4,11 @@ let mongodb = require('mongodb').MongoClient
 
 let app = express()
 let db
+let port=process.env.PORT
+if(port==null || port==""){
+port=8000
+
+}
 
 
 
@@ -11,9 +16,10 @@ app.use(express.json())
 app.use(express.static('public'))
 
 const string = 'mongodb+srv://toappuser:ufg4tGLQogufmTlM@cluster0.vt8zr.mongodb.net/?retryWrites=true&w=majority'
+
 mongodb.connect(string, { useNewUrlParser: true }, (err, client) => {
   db = client.db('todoapp')
-  app.listen(8000)
+  app.listen(port)
 })
 
 app.use(express.urlencoded({ extended: false }))
