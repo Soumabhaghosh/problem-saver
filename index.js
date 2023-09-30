@@ -13,7 +13,7 @@ port=8000
 
 
 app.use(express.json())
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'));
 
 const string = 'mongodb+srv://toappuser:ufg4tGLQogufmTlM@cluster0.vt8zr.mongodb.net/?retryWrites=true&w=majority'
 
